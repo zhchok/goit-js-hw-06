@@ -8,19 +8,16 @@ const btnDecrement = document.querySelector('[data-action="decrement"]');
 const btnIncrement = document.querySelector('[data-action="increment"]');
 const valueContetn = document.querySelector('#value');
 
-const onDecrementButtonClick = ({ value, step }) => {
-    value -= step;
-    valueContetn.textContent = value;
-};
-
-onDecrementButtonClick(counter);
-
 btnDecrement.addEventListener('click', onDecrementButtonClick);
-
-const onIncrementButtonClick = () => {
-    counter.value += counter.step;
-    valueContetn.textContent = counter.value;
-};
 
 btnIncrement.addEventListener('click', onIncrementButtonClick);
 
+function onDecrementButtonClick() {
+    counter.value -= counter.step;
+    valueContetn.textContent = counter.value;
+}
+
+function onIncrementButtonClick() {
+    counter.value += counter.step;
+    valueContetn.textContent = counter.value;
+}
